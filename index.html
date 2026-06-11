@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VANGUARD LEGAL | Despacho jurídico internacional de élite. Excelencia jurídica, resultados excepcionales. Representación legal estratégica para empresas, inversionistas y particulares exigentes.">
+    <title>VANGUARD LEGAL • Despacho Jurídico de Élite Internacional</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;family=Cinzel:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;family=Cinzel:wght@400;500;700&amp;display=swap');
+        
+        :root {
+            --obsidian: #050505;
+            --juridico: #071A3D;
+            --grafito: #1A1A1A;
+            --gold: #D4AF37;
+            --ivory: #F5F5F5;
+            --silver: #BFC5CE;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .font-premium {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        
+        .font-cinzel {
+            font-family: 'Cinzel', Georgia, serif;
+        }
+
+        .section-header {
+            font-family: 'Playfair Display', Georgia, serif;
+            letter-spacing: -0.025em;
+        }
+
+        .glass {
+            background: rgba(26, 26, 26, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .glass-light {
+            background: rgba(245, 245, 245, 0.08);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .premium-border {
+            border-image: linear-gradient(to right, #D4AF37, transparent, #D4AF37) 1;
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #C5A030 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-scrolled {
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.23, 1.0, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #D4AF37, transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 25px 60px -15px rgb(0 0 0 / 0.5), 
+                       0 0 0 1px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .team-card {
+            transition: all 0.5s cubic-bezier(0.23, 1.0, 0.32, 1);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-12px);
+        }
+        
+        .team-card:hover .team-overlay {
+            opacity: 1;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.23, 1.0, 0.32, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .premium-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.23, 1.0, 0.32, 1);
+            font-weight: 600;
+            letter-spacing: 0.025em;
+        }
+        
+        .premium-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -100%;
+            width: 50%;
+            height: 200%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,0.25),
+                transparent
+            );
+            transition: left 0.6s;
+        }
+        
+        .premium-btn:hover::after {
+            left: 250%;
+        }
+
+        .premium-btn-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #C5A030 100%);
+            color: #050505;
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.4);
+        }
+        
+        .premium-btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px -10px rgba(212, 175, 55, 0.5);
+        }
+
+        .premium-btn-outline {
+            background: transparent;
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+        }
+        
+        .premium-btn-outline:hover {
+            background: #D4AF37;
+            color: #050505;
+            transform: translateY(-2px);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .modal {
+            animation: modalEnter 0.4s cubic-bezier(0.23, 1.0, 0.32, 1);
+        }
+
+        @keyframes modalEnter {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .form-input {
+            transition: all 0.3s ease;
+            background: rgba(26, 26, 26, 0.6);
+            border: 1px solid rgba(191, 197, 206, 0.2);
+        }
+        
+        .form-input:focus {
+            border-color: #D4AF37;
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+            background: rgba(26, 26, 26, 0.8);
+        }
+
+        .section-divider {
+            background: linear-gradient(to right, transparent, #D4AF37, transparent);
+            height: 1px;
+            opacity: 0.2;
+        }
+
+        .luxury-shadow {
+            box-shadow: 0 30px 70px -15px rgb(0 0 0 / 0.6),
+                        0 10px 20px -5px rgb(0 0 0 / 0.4);
+        }
+
+        .gold-text {
+            color: #D4AF37;
+        }
+
+        .legal-text {
+            font-size: 0.75rem;
+            line-height: 1.6;
+            color: #BFC5CE;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-grid {
+            background-image: 
+                linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+            background-size: 80px 80px;
+        }
+
+        .cinematic-overlay {
+            background: linear-gradient(
+                to bottom, 
+                rgba(5,5,5,0.65) 0%, 
+                rgba(5,5,5,0.35) 35%, 
+                rgba(7,26,61,0.45) 65%, 
+                rgba(5,5,5,0.75) 100%
+            );
+        }
+
+        .metric-value {
+            font-family: 'Cinzel', Georgia, serif;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+        }
+    </style>
+</head>
+<body class="bg-[#050505] text-[#F5F5F5] overflow-x-hidden">
+    
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#050505]/90 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#D4AF37] via-[#C5A030] to-[#D4AF37] flex items-center justify-center shadow-inner">
+                        <div class="w-9 h-9 rounded-full bg-[#050505] flex items-center justify-center">
+                            <i class="fa-solid fa-balance-scale text-[#D4AF37] text-2xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-cinzel text-3xl tracking-[-1.5px] font-semibold text-white">VANGUARD</div>
+                        <div class="text-[10px] text-[#D4AF37] -mt-1.5 tracking-[3px] font-medium">LEGAL</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-10 text-sm font-medium tracking-wide">
+                    <a href="#servicios" class="nav-link text-[#F5F5F5] hover:text-[#D4AF37] transition-colors">Servicios</a>
+                    <a href="#por-que" class="nav-link text-[#F5F5F5] hover:text-[#D4AF37] transition-colors">Por qué elegirnos</a>
+                    <a href="#equipo" class="nav-link text-[#F5F5F5] hover:text-[#D4AF37] transition-colors">Equipo</a>
+                    <a href="#casos" class="nav-link text-[#F5F5F5] hover:text-[#D4AF37] transition-colors">Casos de Éxito</a>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hidden md:flex items-center gap-x-4">
+                    <button onclick="document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' })" 
+                            class="px-6 py-2.5 text-sm font-semibold border border-[#D4AF37]/70 hover:bg-[#D4AF37]/10 text-[#D4AF37] rounded-full transition-all active:scale-[0.985]">
+                        Llamar Ahora
+                    </button>
+                    <button onclick="openConsultModal()" 
+                            class="premium-btn premium-btn-gold px-8 py-2.5 text-sm rounded-full font-semibold flex items-center gap-x-2 shadow-lg">
+                        <span>Agendar Consulta</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden w-11 h-11 flex items-center justify-center text-[#D4AF37]">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-[60] bg-[#050505]/95 pt-20">
+        <div class="px-8 py-8 flex flex-col gap-y-6 text-lg">
+            <a href="#servicios" class="mobile-nav-link py-3 border-b border-white/10">Servicios</a>
+            <a href="#por-que" class="mobile-nav-link py-3 border-b border-white/10">Por qué elegirnos</a>
+            <a href="#equipo" class="mobile-nav-link py-3 border-b border-white/10">Nuestro Equipo</a>
+            <a href="#casos" class="mobile-nav-link py-3 border-b border-white/10">Casos de Éxito</a>
+            
+            <div class="pt-6 flex flex-col gap-y-3">
+                <button onclick="document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' }); closeMobileMenu();" 
+                        class="w-full py-3.5 border border-[#D4AF37]/60 text-[#D4AF37] rounded-2xl font-medium">
+                    Llamar Ahora
+                </button>
+                <button onclick="openConsultModal(); closeMobileMenu();" 
+                        class="w-full py-3.5 premium-btn premium-btn-gold rounded-2xl font-semibold">
+                    Agendar Consulta Estratégica
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden bg-[#050505]">
+        <!-- Background Layers -->
+        <div class="absolute inset-0 bg-[radial-gradient(#1A1A1A_0.8px,transparent_1px)] bg-[length:5px_5px] opacity-40"></div>
+        
+        <!-- Deep Gradient Overlay -->
+        <div class="absolute inset-0 cinematic-overlay"></div>
+        
+        <!-- Geometric Lines -->
+        <div class="absolute inset-0 hero-grid opacity-30"></div>
+        
+        <!-- Subtle Gold Accents Lines -->
+        <div class="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent"></div>
+        <div class="absolute bottom-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/10 to-transparent"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-8">
+                <div class="w-1.5 h-1.5 bg-[#D4AF37] rounded-full animate-pulse"></div>
+                <span class="text-xs tracking-[2px] font-medium text-[#D4AF37]">EST. 2004 • CDMX • NUEVA YORK • LONDRES</span>
+            </div>
+            
+            <h1 class="section-header text-6xl md:text-7xl lg:text-[5.1rem] leading-[0.96] font-semibold tracking-tighter mb-6">
+                Protegemos sus intereses<br>
+                <span class="gold-gradient">con excelencia jurídica.</span>
+            </h1>
+            
+            <p class="max-w-3xl mx-auto text-xl md:text-2xl text-[#BFC5CE] font-light tracking-tight mb-10">
+                Representación legal de élite para empresas, inversionistas y particulares que exigen 
+                los más altos estándares de precisión, discreción y resultados medibles.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button onclick="openConsultModal()" 
+                        class="premium-btn premium-btn-gold w-full sm:w-auto px-10 py-4 text-lg rounded-2xl font-semibold flex items-center justify-center gap-x-3 group">
+                    <span>Agendar Consulta Estratégica</span>
+                    <i class="fa-solid fa-arrow-right transition-transform group-active:translate-x-1"></i>
+                </button>
+                
+                <button onclick="document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' })" 
+                        class="premium-btn premium-btn-outline w-full sm:w-auto px-9 py-4 text-lg rounded-2xl font-semibold flex items-center justify-center gap-x-2">
+                    <span>Conocer Servicios</span>
+                </button>
+            </div>
+            
+            <div class="mt-14 flex justify-center">
+                <div onclick="document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' })" 
+                     class="flex flex-col items-center cursor-pointer group">
+                    <span class="text-xs tracking-[1.5px] text-[#BFC5CE]/70 mb-1.5">DESCUBRA MÁS</span>
+                    <i class="fa-solid fa-chevron-down text-[#D4AF37]/70 group-hover:text-[#D4AF37] transition-colors text-sm animate-bounce"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Golden Particles Canvas -->
+        <canvas id="hero-particles" class="absolute inset-0 z-0 pointer-events-none"></canvas>
+    </section>
+
+    <!-- TRUST BAR / QUICK STATS -->
+    <div class="border-b border-white/10 bg-[#071A3D]/30 py-5">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex flex-wrap justify-center md:justify-between items-center gap-x-10 gap-y-3 text-center text-sm">
+                <div class="flex items-center gap-x-2 text-[#BFC5CE]">
+                    <i class="fa-solid fa-globe text-[#D4AF37]"></i>
+                    <span class="font-medium">Presencia en 3 continentes</span>
+                </div>
+                <div class="hidden md:block w-px h-3.5 bg-white/20"></div>
+                <div class="text-[#BFC5CE]">Clientes en <span class="text-white font-semibold">28 países</span></div>
+                <div class="hidden md:block w-px h-3.5 bg-white/20"></div>
+                <div class="text-[#BFC5CE]">Miembros de <span class="text-white font-semibold">International Bar Association</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ESTADÍSTICAS SECTION -->
+    <section id="estadisticas" class="max-w-7xl mx-auto px-8 pt-20 pb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 rounded-3xl overflow-hidden border border-white/10">
+            
+            <div class="bg-[#1A1A1A] p-8 text-center group">
+                <div class="text-5xl md:text-6xl font-semibold metric-value text-white mb-1 stat-number" data-target="320">320</div>
+                <div class="text-[#D4AF37] text-sm tracking-widest font-medium">CASOS DE ALTO PERFIL</div>
+                <div class="text-xs text-[#BFC5CE] mt-1">Resueltos exitosamente</div>
+            </div>
+            
+            <div class="bg-[#1A1A1A] p-8 text-center group">
+                <div class="text-5xl md:text-6xl font-semibold metric-value text-white mb-1 stat-number" data-target="98">98</div>
+                <div class="text-[#D4AF37] text-sm tracking-widest font-medium">TASA DE ÉXITO</div>
+                <div class="text-xs text-[#BFC5CE] mt-1">En litigios estratégicos</div>
+            </div>
+            
+            <div class="bg-[#1A1A1A] p-8 text-center group">
+                <div class="text-5xl md:text-6xl font-semibold metric-value text-white mb-1 stat-number" data-target="1850">1,850</div>
+                <div class="text-[#D4AF37] text-sm tracking-widest font-medium">CLIENTES ATENDIDOS</div>
+                <div class="text-xs text-[#BFC5CE] mt-1">Empresas e individuos</div>
+            </div>
+            
+            <div class="bg-[#1A1A1A] p-8 text-center group">
+                <div class="text-5xl md:text-6xl font-semibold metric-value text-white mb-1 stat-number" data-target="22">22</div>
+                <div class="text-[#D4AF37] text-sm tracking-widest font-medium">AÑOS DE EXCELENCIA</div>
+                <div class="text-xs text-[#BFC5CE] mt-1">Desde 2004</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS SECTION -->
+    <section id="servicios" class="max-w-7xl mx-auto px-8 pt-8 pb-20">
+        <div class="flex flex-col items-center text-center mb-14">
+            <div class="inline px-4 py-1 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] text-xs tracking-[2.5px] font-semibold mb-4">ÁREAS DE PRÁCTICA</div>
+            <h2 class="section-header text-5xl md:text-6xl tracking-tighter font-semibold">Servicios de Élite</h2>
+            <p class="max-w-md mt-4 text-[#BFC5CE]">Soluciones jurídicas especializadas con enfoque estratégico y resultados medibles.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Service Cards -->
+            <div onclick="selectServiceAndOpenModal('Derecho Corporativo')" class="service-card glass rounded-3xl p-8 group cursor-pointer border border-white/10 hover:border-[#D4AF37]/30">
+                <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition-colors">
+                    <i class="fa-solid fa-building text-[#D4AF37] text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3">Derecho Corporativo</h3>
+                <p class="text-[#BFC5CE] leading-relaxed text-[15px]">Asesoría integral en constitución, gobierno corporativo, fusiones y adquisiciones, y cumplimiento normativo para empresas nacionales e internacionales.</p>
+                <div class="mt-6 flex items-center text-sm text-[#D4AF37] font-medium group-hover:gap-x-2 transition-all">
+                    <span>Solicitar asesoría</span> 
+                    <i class="fa-solid fa-arrow-right ml-1.5 transition-transform group-hover:translate-x-1"></i>
+                </div>
+            </div>
+
+            <div onclick="selectServiceAndOpenModal('Derecho Civil')" class="service-card glass rounded-3xl p-8 group cursor-pointer border border-white/10 hover:border-[#D4AF37]/30">
+                <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition-colors">
+                    <i class="fa-solid fa-gavel text-[#D4AF37] text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3">Derecho Civil</h3>
+                <p class="text-[#BFC5CE] leading-relaxed text-[15px]">Resolución de controversias civiles, sucesiones, responsabilidad civil profesional y patrimonial con estrategias procesales de alto nivel.</p>
+                <div class="mt-6 flex items-center text-sm text-[#D4AF37] font-medium group-hover:gap-x-2 transition-all">
+                    <span>Solicitar asesoría</span> 
+                    <i class="fa-solid fa-arrow-right ml-1.5 transition-transform group-hover:translate-x-1"></i>
+                </div>
+            </div>
+
+            <div onclick="selectServiceAndOpenModal('Derecho Mercantil')" class="service-card glass rounded-3xl p-8 group cursor-pointer border border-white/10 hover:border-[#D4AF37]/30">
+                <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition-colors">
+                    <i class="fa-solid fa-handshake text-[#D4AF37] text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3">Derecho Mercantil</h3>
+                <p class="text-[#BFC5CE] leading-relaxed text-[15px]">Contratos comerciales, operaciones societarias, joint ventures y asesoría en transacciones mercantiles complejas a nivel nacional e internacional.</p>
+                <div class="mt-6 flex items-center text-sm text-[#D4AF37] font-medium group-hover:gap-x-2 transition-all">
+                    <span>Solicitar asesoría</span> 
+                    <i class="fa-solid fa-arrow-right ml-1.5 transition-transform group-hover:translate-x-1"></i>
+                </div>
+            </div>
+
+            <div onclick="selectServiceAndOpenModal('Derecho Laboral')" class="service-card glass rounded-3xl p-8 group cursor-pointer border border-white/10 hover:border-[#D4AF37]/30">
+                <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition-colors">
+                    <i class="fa-solid fa-users text-[#D4AF37] text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3">Derecho Laboral</h3>
+                <p class="text-[#BFC5CE] leading-relaxed text-[15px]">Asesoría en relaciones laborales, litigios individuales y colectivos, compliance laboral, y negociación de contratos de alta dirección.</p>
+                <div class="mt-6 flex items-center text-sm text-[#D4AF37] font-medium group-hover:gap-x-2 transition-all">
+                    <span>Solicitar asesoría</span> 
+                    <i class="fa-solid fa-arrow-right ml-1.5 transition-transform group-hover:translate-x-1"></i>
+                </div>
+            </div>
+
+            <div onclick="selectServiceAndOpenModal('Litigio Estratégico')" class="service-card glass rounded-3xl p-8 group cursor-pointer border border-white/10 hover:border-[#D4AF37]/30">
+                <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition-colors">
+                    <i class="fa-solid fa-balance-scale text-[#D4AF37] text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3">Litigio Estratégico</h3>
+                <p class="text-[#BFC5CE] leading-relaxed text-[15px]">Representación en litigios complejos de alto impacto, arbitraje internacional y resolución alternativa de disputas con enfoque en resultados óptimos.</p>
+                <div class="mt-6 flex items-center text-sm text-[#D4AF37] font-medium group-hover:gap-x-2 transition-all">
+                    <span>Solicitar asesoría</span> 
+                    <i class="fa-solid fa-arrow-right ml-1.5 transition-transform group-hover:translate-x-1"></i>
+                </div>
+            </div>
+
+            <div onclick="selectServiceAndOpenModal('Propiedad Intelectual')" class="service-card glass rounded-3xl p-8 group cursor-pointer border border-white/10 hover:border-[#D4AF37]/30">
+                <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition-colors">
+                    <i class="fa-solid fa-lightbulb text-[#D4AF37] text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3">Propiedad Intelectual</h3>
+                <p class="text-[#BFC5CE] leading-relaxed text-[15px]">Protección y defensa de marcas, patentes, derechos de autor y secretos industriales. Estrategias de enforcement y licencias internacionales.</p>
+                <div class="mt-6 flex items-center text-sm text-[#D4AF37] font-medium group-hover:gap-x-2 transition-all">
+                    <span>Solicitar asesoría</span> 
+                    <i class="fa-solid fa-arrow-right ml-1.5 transition-transform group-hover:translate-x-1"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-8">
+            <button onclick="openConsultModal()" class="text-sm underline underline-offset-4 decoration-[#D4AF37]/40 hover:decoration-[#D4AF37] text-[#D4AF37] font-medium">¿Necesita un servicio específico? Contáctenos →</button>
+        </div>
+    </section>
+
+    <!-- POR QUÉ ELEGIRNOS -->
+    <section id="por-que" class="bg-[#071A3D]/40 py-20 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid lg:grid-cols-12 gap-x-16 gap-y-12 items-center">
+                
+                <div class="lg:col-span-5">
+                    <div class="sticky top-24">
+                        <div class="text-[#D4AF37] text-xs tracking-[3px] font-semibold mb-3">DIFERENCIADORES</div>
+                        <h2 class="section-header text-5xl md:text-[3.1rem] leading-none tracking-[-1.5px] font-semibold">Por qué las élites<br>nos eligen.</h2>
+                        <p class="mt-6 text-lg text-[#BFC5CE]">No somos un despacho más. Somos el socio estratégico que transforma desafíos legales en ventajas competitivas sostenibles.</p>
+                        
+                        <button onclick="openConsultModal()" class="mt-8 premium-btn premium-btn-outline px-8 py-3 rounded-2xl text-sm font-semibold inline-flex items-center gap-x-2">
+                            INICIAR CONVERSACIÓN <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-7 grid md:grid-cols-2 gap-5">
+                    
+                    <div class="glass rounded-3xl p-8 border border-white/10">
+                        <div class="flex items-start gap-x-4">
+                            <div class="mt-1"><i class="fa-solid fa-user-tie text-[#D4AF37] text-3xl"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-xl tracking-tight">Atención Personalizada</h4>
+                                <p class="mt-2 text-[#BFC5CE]">Cada cliente cuenta con un equipo dedicado de alto nivel. Acceso directo a socios y respuesta en menos de 4 horas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass rounded-3xl p-8 border border-white/10">
+                        <div class="flex items-start gap-x-4">
+                            <div class="mt-1"><i class="fa-solid fa-chess-knight text-[#D4AF37] text-3xl"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-xl tracking-tight">Estrategia Jurídica de Alto Nivel</h4>
+                                <p class="mt-2 text-[#BFC5CE]">No solo resolvemos problemas. Diseñamos estrategias que anticipan riesgos y generan valor tangible para su organización.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass rounded-3xl p-8 border border-white/10">
+                        <div class="flex items-start gap-x-4">
+                            <div class="mt-1"><i class="fa-solid fa-tachometer-alt text-[#D4AF37] text-3xl"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-xl tracking-tight">Resultados Medibles</h4>
+                                <p class="mt-2 text-[#BFC5CE]">Reportes claros, KPIs definidos y comunicación transparente. Usted siempre sabe dónde está su asunto y qué esperar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass rounded-3xl p-8 border border-white/10">
+                        <div class="flex items-start gap-x-4">
+                            <div class="mt-1"><i class="fa-solid fa-shield-halved text-[#D4AF37] text-3xl"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-xl tracking-tight">Confidencialidad Absoluta</h4>
+                                <p class="mt-2 text-[#BFC5CE]">Protocolos de seguridad de nivel corporativo. Su información está protegida con los más altos estándares de la industria legal internacional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPO SECTION -->
+    <section id="equipo" class="max-w-7xl mx-auto px-8 py-20">
+        <div class="text-center mb-14">
+            <div class="text-[#D4AF37] text-xs tracking-[3px] font-semibold mb-3">LIDERAZGO EXCEPCIONAL</div>
+            <h2 class="section-header text-5xl tracking-tighter font-semibold">Nuestro Equipo</h2>
+            <p class="max-w-lg mx-auto mt-4 text-[#BFC5CE]">Abogados de talla mundial con trayectoria comprobada en las jurisdicciones más exigentes.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+            
+            <!-- Team Member 1 -->
+            <div class="team-card glass rounded-3xl overflow-hidden border border-white/10 group">
+                <div class="relative">
+                    <img src="https://picsum.photos/id/1005/600/720" alt="Dr. Eduardo Harrington - Socio Fundador" class="w-full aspect-[4/3.35] object-cover grayscale-[0.15] group-hover:grayscale-0 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70"></div>
+                    <div class="team-overlay absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/60 to-[#050505] opacity-0 transition-all duration-300 flex items-end p-6">
+                        <div class="text-xs">
+                            <div class="flex gap-x-3 text-[#D4AF37]">
+                                <a href="#" class="hover:text-white"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#" class="hover:text-white"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-7">
+                    <div class="font-semibold text-2xl tracking-tight">Dr. Eduardo Harrington</div>
+                    <div class="text-[#D4AF37] text-sm font-medium mt-0.5">Socio Fundador • Director General</div>
+                    <div class="mt-4 text-sm text-[#BFC5CE]">28 años de experiencia en Derecho Corporativo Internacional, M&amp;A y gobierno corporativo. Ex socio de firmas top en Nueva York y Londres.</div>
+                    <div class="mt-5 text-xs text-[#D4AF37]/80 font-medium">HARVARD LAW • LSE • IBA FELLOW</div>
+                </div>
+            </div>
+            
+            <!-- Team Member 2 -->
+            <div class="team-card glass rounded-3xl overflow-hidden border border-white/10 group">
+                <div class="relative">
+                    <img src="https://picsum.photos/id/1011/600/720" alt="Lic. Valentina Moreau - Socia Directora" class="w-full aspect-[4/3.35] object-cover grayscale-[0.15] group-hover:grayscale-0 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70"></div>
+                    <div class="team-overlay absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/60 to-[#050505] opacity-0 transition-all duration-300 flex items-end p-6">
+                        <div class="text-xs">
+                            <div class="flex gap-x-3 text-[#D4AF37]">
+                                <a href="#" class="hover:text-white"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#" class="hover:text-white"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-7">
+                    <div class="font-semibold text-2xl tracking-tight">Lic. Valentina Moreau</div>
+                    <div class="text-[#D4AF37] text-sm font-medium mt-0.5">Socia Directora • Litigio Estratégico</div>
+                    <div class="mt-4 text-sm text-[#BFC5CE]">Especialista en arbitraje internacional y litigios de alto perfil. Ha representado a corporativos Fortune 500 en disputas transfronterizas.</div>
+                    <div class="mt-5 text-xs text-[#D4AF37]/80 font-medium">YALE LAW • PARIS II • ICC ARBITRATOR</div>
+                </div>
+            </div>
+            
+            <!-- Team Member 3 -->
+            <div class="team-card glass rounded-3xl overflow-hidden border border-white/10 group">
+                <div class="relative">
+                    <img src="https://picsum.photos/id/1006/600/720" alt="Dr. Rafael Solano - Socio" class="w-full aspect-[4/3.35] object-cover grayscale-[0.15] group-hover:grayscale-0 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70"></div>
+                    <div class="team-overlay absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/60 to-[#050505] opacity-0 transition-all duration-300 flex items-end p-6">
+                        <div class="text-xs">
+                            <div class="flex gap-x-3 text-[#D4AF37]">
+                                <a href="#" class="hover:text-white"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#" class="hover:text-white"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-7">
+                    <div class="font-semibold text-2xl tracking-tight">Dr. Rafael Solano</div>
+                    <div class="text-[#D4AF37] text-sm font-medium mt-0.5">Socio • Derecho Mercantil &amp; Financiero</div>
+                    <div class="mt-4 text-sm text-[#BFC5CE]">Experto en operaciones transfronterizas, banca de inversión y regulación financiera. Asesor de fondos de private equity y family offices.</div>
+                    <div class="mt-5 text-xs text-[#D4AF37]/80 font-medium">STANFORD • BOALT HALL • EX JP MORGAN</div>
+                </div>
+            </div>
+            
+            <!-- Team Member 4 -->
+            <div class="team-card glass rounded-3xl overflow-hidden border border-white/10 group">
+                <div class="relative">
+                    <img src="https://picsum.photos/id/29/600/720" alt="Lic. Isabella Cruz - Socia" class="w-full aspect-[4/3.35] object-cover grayscale-[0.15] group-hover:grayscale-0 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70"></div>
+                    <div class="team-overlay absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/60 to-[#050505] opacity-0 transition-all duration-300 flex items-end p-6">
+                        <div class="text-xs">
+                            <div class="flex gap-x-3 text-[#D4AF37]">
+                                <a href="#" class="hover:text-white"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#" class="hover:text-white"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-7">
+                    <div class="font-semibold text-2xl tracking-tight">Lic. Isabella Cruz</div>
+                    <div class="text-[#D4AF37] text-sm font-medium mt-0.5">Socia • Propiedad Intelectual &amp; Tecnología</div>
+                    <div class="mt-4 text-sm text-[#BFC5CE]">Líder en protección de activos intangibles, ciberseguridad jurídica y negociación de licencias tecnológicas a escala global.</div>
+                    <div class="mt-5 text-xs text-[#D4AF37]/80 font-medium">U. DE CHICAGO • WIPO • EX GOOGLE LEGAL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="max-w-7xl mx-auto px-8 pb-16">
+        <div class="text-center mb-12">
+            <div class="text-[#D4AF37] text-xs tracking-[3px] font-semibold mb-3">CONFIANZA DE NUESTROS CLIENTES</div>
+            <h2 class="section-header text-4xl tracking-tight font-semibold">Lo que dicen quienes confían en nosotros</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="glass rounded-3xl p-8 border border-white/10">
+                <div class="flex gap-x-1 text-[#D4AF37] mb-6">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <blockquote class="text-[15px] leading-relaxed">"Vanguard Legal transformó la manera en que gestionamos nuestro riesgo legal global. Su equipo anticipa problemas que otros ni siquiera ven. Son, sin duda, el mejor despacho con el que hemos trabajado."</blockquote>
+                <div class="mt-8 flex items-center gap-x-4">
+                    <div class="w-10 h-10 rounded-full overflow-hidden border border-white/20"><img src="https://picsum.photos/id/1008/80/80" class="object-cover"></div>
+                    <div>
+                        <div class="font-semibold">Carlos Mendoza</div>
+                        <div class="text-xs text-[#BFC5CE]">CEO &amp; Fundador • Grupo Industrial del Norte</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass rounded-3xl p-8 border border-white/10">
+                <div class="flex gap-x-1 text-[#D4AF37] mb-6">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <blockquote class="text-[15px] leading-relaxed">"En una disputa internacional de propiedad intelectual valorada en más de 40 millones de dólares, su estrategia y ejecución fueron impecables. Logramos un resultado que superó todas nuestras expectativas."</blockquote>
+                <div class="mt-8 flex items-center gap-x-4">
+                    <div class="w-10 h-10 rounded-full overflow-hidden border border-white/20"><img src="https://picsum.photos/id/1012/80/80" class="object-cover"></div>
+                    <div>
+                        <div class="font-semibold">Dra. Laura Kensington</div>
+                        <div class="text-xs text-[#BFC5CE]">Chief Legal Officer • TechGlobal Ventures</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass rounded-3xl p-8 border border-white/10">
+                <div class="flex gap-x-1 text-[#D4AF37] mb-6">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <blockquote class="text-[15px] leading-relaxed">"La discreción, el rigor intelectual y la capacidad de respuesta de Vanguard Legal son inigualables. Son nuestro socio de confianza para todas las operaciones transfronterizas de nuestra familia."</blockquote>
+                <div class="mt-8 flex items-center gap-x-4">
+                    <div class="w-10 h-10 rounded-full overflow-hidden border border-white/20"><img src="https://picsum.photos/id/1009/80/80" class="object-cover"></div>
+                    <div>
+                        <div class="font-semibold">Familia Hernández de la Vega</div>
+                        <div class="text-xs text-[#BFC5CE]">Family Office • Multi-generational Wealth</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASOS DE ÉXITO -->
+    <section id="casos" class="max-w-7xl mx-auto px-8 py-16 border-t border-white/10">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-y-4">
+            <div>
+                <div class="text-[#D4AF37] text-xs tracking-[3px] font-semibold mb-2">RESULTADOS QUE HABLAN</div>
+                <h2 class="section-header text-5xl tracking-tighter font-semibold">Casos de Éxito Destacados</h2>
+            </div>
+            <button onclick="openConsultModal()" class="text-sm px-6 py-2.5 border border-[#D4AF37]/60 hover:bg-white/5 transition-colors rounded-2xl whitespace-nowrap">Ver más casos en nuestro portafolio →</button>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            
+            <div class="glass rounded-3xl p-8 border border-white/10 group">
+                <div class="uppercase text-xs tracking-widest text-[#D4AF37] font-semibold mb-4">FUSIONES &amp; ADQUISICIONES</div>
+                <h3 class="font-semibold text-2xl tracking-tight leading-tight">Adquisición estratégica de grupo industrial líder en LATAM</h3>
+                <div class="my-6 h-px bg-gradient-to-r from-[#D4AF37]/30 to-transparent"></div>
+                
+                <div class="space-y-4 text-sm">
+                    <div><span class="text-[#BFC5CE]">Cliente:</span> <span class="font-medium">Conglomerado multinacional</span></div>
+                    <div><span class="text-[#BFC5CE]">Valor de la transacción:</span> <span class="font-medium">$187 millones USD</span></div>
+                    <div><span class="text-[#BFC5CE]">Resultado:</span> <span class="font-medium text-emerald-400">Cierre exitoso en 5 meses</span></div>
+                </div>
+                <div class="mt-7 text-xs text-[#D4AF37] font-medium flex items-center gap-x-2 group-hover:gap-x-3 transition-all">
+                    VER DETALLES DEL CASO <i class="fa-solid fa-external-link-alt text-xs"></i>
+                </div>
+            </div>
+            
+            <div class="glass rounded-3xl p-8 border border-white/10 group">
+                <div class="uppercase text-xs tracking-widest text-[#D4AF37] font-semibold mb-4">LITIGIO ESTRATÉGICO</div>
+                <h3 class="font-semibold text-2xl tracking-tight leading-tight">Defensa exitosa en arbitraje internacional de construcción</h3>
+                <div class="my-6 h-px bg-gradient-to-r from-[#D4AF37]/30 to-transparent"></div>
+                
+                <div class="space-y-4 text-sm">
+                    <div><span class="text-[#BFC5CE]">Cliente:</span> <span class="font-medium">Consorcio de infraestructura</span></div>
+                    <div><span class="text-[#BFC5CE]">Valor en disputa:</span> <span class="font-medium">$92 millones USD</span></div>
+                    <div><span class="text-[#BFC5CE]">Resultado:</span> <span class="font-medium text-emerald-400">Laudo favorable 100%</span></div>
+                </div>
+                <div class="mt-7 text-xs text-[#D4AF37] font-medium flex items-center gap-x-2 group-hover:gap-x-3 transition-all">
+                    VER DETALLES DEL CASO <i class="fa-solid fa-external-link-alt text-xs"></i>
+                </div>
+            </div>
+            
+            <div class="glass rounded-3xl p-8 border border-white/10 group">
+                <div class="uppercase text-xs tracking-widest text-[#D4AF37] font-semibold mb-4">PROPIEDAD INTELECTUAL</div>
+                <h3 class="font-semibold text-2xl tracking-tight leading-tight">Protección global de portafolio tecnológico</h3>
+                <div class="my-6 h-px bg-gradient-to-r from-[#D4AF37]/30 to-transparent"></div>
+                
+                <div class="space-y-4 text-sm">
+                    <div><span class="text-[#BFC5CE]">Cliente:</span> <span class="font-medium">Startup unicornio latinoamericana</span></div>
+                    <div><span class="text-[#BFC5CE]">Activos protegidos:</span> <span class="font-medium">47 patentes y marcas</span></div>
+                    <div><span class="text-[#BFC5CE]">Resultado:</span> <span class="font-medium text-emerald-400">Enforcement exitoso en 9 jurisdicciones</span></div>
+                </div>
+                <div class="mt-7 text-xs text-[#D4AF37] font-medium flex items-center gap-x-2 group-hover:gap-x-3 transition-all">
+                    VER DETALLES DEL CASO <i class="fa-solid fa-external-link-alt text-xs"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO / FORMULARIO -->
+    <section id="contacto" class="max-w-5xl mx-auto px-8 py-20">
+        <div class="glass rounded-[2.75rem] p-10 md:p-16 border border-white/10 relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl"></div>
+            
+            <div class="grid lg:grid-cols-5 gap-x-16 gap-y-12 relative">
+                
+                <div class="lg:col-span-2">
+                    <div class="text-[#D4AF37] tracking-[2.5px] text-xs font-semibold mb-4">PRÓXIMO PASO</div>
+                    <h2 class="section-header text-5xl tracking-[-1.2px] leading-none font-semibold">Inicie una conversación<br>estratégica.</h2>
+                    
+                    <div class="mt-9 space-y-5 text-sm">
+                        <div class="flex gap-x-4">
+                            <i class="fa-solid fa-phone text-[#D4AF37] mt-1 w-5"></i>
+                            <div>
+                                <div class="font-medium">+52 55 8521 3940</div>
+                                <div class="text-xs text-[#BFC5CE]">Lunes a Viernes • 8:00 - 19:00</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-x-4">
+                            <i class="fa-solid fa-envelope text-[#D4AF37] mt-1 w-5"></i>
+                            <div>
+                                <div class="font-medium">consultas@vanguard.legal</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-x-4">
+                            <i class="fa-solid fa-map-marker-alt text-[#D4AF37] mt-1 w-5"></i>
+                            <div class="text-sm">
+                                <div>Paseo de la Reforma 505, Piso 32</div>
+                                <div>Col. Cuauhtémoc, CDMX 06500</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10 flex gap-x-4">
+                        <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/5 transition-colors"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/5 transition-colors"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Form -->
+                <div class="lg:col-span-3">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs tracking-widest text-[#BFC5CE] mb-2">NOMBRE COMPLETO</label>
+                                <input type="text" id="nombre" required class="form-input w-full px-5 py-3.5 rounded-2xl text-white placeholder:text-white/40 focus:outline-none" placeholder="Juan Pérez">
+                            </div>
+                            <div>
+                                <label class="block text-xs tracking-widest text-[#BFC5CE] mb-2">EMPRESA / ORGANIZACIÓN</label>
+                                <input type="text" id="empresa" class="form-input w-full px-5 py-3.5 rounded-2xl text-white placeholder:text-white/40 focus:outline-none" placeholder="Empresa S.A. de C.V.">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs tracking-widest text-[#BFC5CE] mb-2">CORREO ELECTRÓNICO</label>
+                                <input type="email" id="email" required class="form-input w-full px-5 py-3.5 rounded-2xl text-white placeholder:text-white/40 focus:outline-none" placeholder="correo@empresa.com">
+                            </div>
+                            <div>
+                                <label class="block text-xs tracking-widest text-[#BFC5CE] mb-2">TELÉFONO</label>
+                                <input type="tel" id="telefono" required class="form-input w-full px-5 py-3.5 rounded-2xl text-white placeholder:text-white/40 focus:outline-none" placeholder="+52 55 1234 5678">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-xs tracking-widest text-[#BFC5CE] mb-2">ÁREA DE INTERÉS</label>
+                            <select id="servicio" class="form-input w-full px-5 py-3.5 rounded-2xl text-white focus:outline-none">
+                                <option value="">Seleccione un servicio...</option>
+                                <option value="Derecho Corporativo">Derecho Corporativo</option>
+                                <option value="Derecho Civil">Derecho Civil</option>
+                                <option value="Derecho Mercantil">Derecho Mercantil</option>
+                                <option value="Derecho Laboral">Derecho Laboral</option>
+                                <option value="Litigio Estratégico">Litigio Estratégico</option>
+                                <option value="Propiedad Intelectual">Propiedad Intelectual</option>
+                                <option value="Asesoría Empresarial">Asesoría Empresarial General</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-xs tracking-widest text-[#BFC5CE] mb-2">CUÉNTENOS BREVE MENTE SU CASO</label>
+                            <textarea id="mensaje" rows="4" required class="form-input w-full px-5 py-4 rounded-3xl text-white placeholder:text-white/40 focus:outline-none resize-y min-h-[110px]" placeholder="Describa brevemente el asunto o la consulta que desea realizar..."></textarea>
+                        </div>
+                        
+                        <div class="pt-2">
+                            <button type="submit" class="premium-btn premium-btn-gold w-full py-4 text-lg rounded-2xl font-semibold flex items-center justify-center gap-x-3">
+                                <span>AGENDAR CONSULTA ESTRATÉGICA</span>
+                            </button>
+                            <p class="text-center text-[10px] text-[#BFC5CE] mt-4 tracking-wide">Su información es tratada con estricta confidencialidad. Respuesta garantizada en menos de 4 horas hábiles.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-white/10 pt-16 pb-10">
+        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-12 gap-y-14">
+            
+            <div class="md:col-span-4">
+                <div class="flex items-center gap-x-3 mb-5">
+                    <div class="w-9 h-9 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#C5A030] flex items-center justify-center">
+                        <i class="fa-solid fa-balance-scale text-[#050505] text-xl"></i>
+                    </div>
+                    <div class="font-cinzel text-3xl tracking-[-1px] text-white">VANGUARD</div>
+                </div>
+                <p class="text-sm text-[#BFC5CE] max-w-xs">Despacho jurídico internacional de élite. Defendemos los intereses de quienes construyen el futuro.</p>
+                
+                <div class="mt-8 text-xs text-[#BFC5CE]">
+                    © 2004 — 2026 VANGUARD LEGAL LLP.<br>
+                    Todos los derechos reservados.
+                </div>
+            </div>
+            
+            <div class="md:col-span-2">
+                <div class="text-xs tracking-widest text-[#D4AF37] font-semibold mb-5">SERVICIOS</div>
+                <div class="space-y-[9px] text-sm text-[#BFC5CE]">
+                    <div>Derecho Corporativo</div>
+                    <div>Litigio Estratégico</div>
+                    <div>Propiedad Intelectual</div>
+                    <div>Derecho Mercantil</div>
+                    <div>Asesoría Empresarial</div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-3">
+                <div class="text-xs tracking-widest text-[#D4AF37] font-semibold mb-5">OFICINAS</div>
+                <div class="space-y-4 text-sm">
+                    <div>
+                        <div class="font-medium text-white">Ciudad de México</div>
+                        <div class="text-[#BFC5CE] text-xs">Paseo de la Reforma 505, Piso 32</div>
+                    </div>
+                    <div>
+                        <div class="font-medium text-white">Nueva York</div>
+                        <div class="text-[#BFC5CE] text-xs">One World Trade Center, Floor 76</div>
+                    </div>
+                    <div>
+                        <div class="font-medium text-white">Londres</div>
+                        <div class="text-[#BFC5CE] text-xs">1 King's Cross, Level 28</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-3">
+                <div class="text-xs tracking-widest text-[#D4AF37] font-semibold mb-5">INFORMACIÓN LEGAL</div>
+                <div class="space-y-[9px] text-sm text-[#BFC5CE]">
+                    <a href="#" class="block hover:text-white transition-colors">Aviso de Privacidad</a>
+                    <a href="#" class="block hover:text-white transition-colors">Términos de Servicio</a>
+                    <a href="#" class="block hover:text-white transition-colors">Política de Cookies</a>
+                    <a href="#" class="block hover:text-white transition-colors">Código de Ética</a>
+                    <a href="#" class="block hover:text-white transition-colors">Transparencia</a>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t border-white/10 text-xs text-[#BFC5CE]">
+                    Autorizado por la Barra Mexicana de Abogados<br>
+                    y regulado conforme a la legislación mexicana.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CONSULTATION MODAL -->
+    <div id="consult-modal" onclick="if (event.target.id === 'consult-modal') closeConsultModal()" class="hidden fixed inset-0 z-[70] bg-black/80 flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="glass w-full max-w-lg rounded-3xl p-9 border border-[#D4AF37]/20 modal">
+            
+            <div class="flex justify-between items-start mb-7">
+                <div>
+                    <div class="text-[#D4AF37] text-xs tracking-[2px]">CONSULTA ESTRATÉGICA</div>
+                    <div class="text-3xl font-semibold tracking-tight">Agende su reunión</div>
+                </div>
+                <button onclick="closeConsultModal()" class="text-3xl leading-none text-white/60 hover:text-white">&times;</button>
+            </div>
+            
+            <form id="modal-form" onsubmit="handleModalFormSubmit(event)">
+                <div class="space-y-5">
+                    <div>
+                        <label class="text-xs text-[#BFC5CE] block mb-1.5">NOMBRE COMPLETO</label>
+                        <input type="text" id="modal-nombre" required class="form-input w-full px-5 py-[13px] rounded-2xl text-sm">
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-5">
+                        <div>
+                            <label class="text-xs text-[#BFC5CE] block mb-1.5">EMAIL</label>
+                            <input type="email" id="modal-email" required class="form-input w-full px-5 py-[13px] rounded-2xl text-sm">
+                        </div>
+                        <div>
+                            <label class="text-xs text-[#BFC5CE] block mb-1.5">TELÉFONO</label>
+                            <input type="tel" id="modal-telefono" required class="form-input w-full px-5 py-[13px] rounded-2xl text-sm">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="text-xs text-[#BFC5CE] block mb-1.5">SERVICIO DE INTERÉS</label>
+                        <select id="modal-servicio" class="form-input w-full px-5 py-[13px] rounded-2xl text-sm">
+                            <option value="Derecho Corporativo">Derecho Corporativo</option>
+                            <option value="Derecho Civil">Derecho Civil</option>
+                            <option value="Derecho Mercantil">Derecho Mercantil</option>
+                            <option value="Derecho Laboral">Derecho Laboral</option>
+                            <option value="Litigio Estratégico">Litigio Estratégico</option>
+                            <option value="Propiedad Intelectual">Propiedad Intelectual</option>
+                            <option value="Asesoría Empresarial">Asesoría Empresarial General</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="text-xs text-[#BFC5CE] block mb-1.5">MENSAJE / DETALLE DEL ASUNTO</label>
+                        <textarea id="modal-mensaje" rows="3" class="form-input w-full px-5 py-4 rounded-2xl text-sm" placeholder="Cuéntenos brevemente cómo podemos ayudarle..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="mt-8 flex gap-x-3">
+                    <button type="button" onclick="closeConsultModal()" class="flex-1 py-3.5 rounded-2xl border border-white/20 text-sm font-medium hover:bg-white/5">CANCELAR</button>
+                    <button type="submit" class="flex-1 premium-btn premium-btn-gold py-3.5 rounded-2xl text-sm font-semibold">CONFIRMAR AGENDA</button>
+                </div>
+                
+                <p class="text-center text-[10px] text-[#BFC5CE]/70 mt-5">Su información será tratada con la más estricta confidencialidad.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+    <div id="success-modal" onclick="if (event.target.id === 'success-modal') closeSuccessModal()" class="hidden fixed inset-0 z-[80] bg-black/90 flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="glass max-w-md w-full rounded-3xl p-9 text-center border border-[#D4AF37]/30">
+            <div class="mx-auto w-16 h-16 rounded-full bg-[#D4AF37]/10 flex items-center justify-center mb-6">
+                <i class="fa-solid fa-check-circle text-[#D4AF37] text-5xl"></i>
+            </div>
+            
+            <h3 class="text-3xl font-semibold tracking-tight">¡Consulta agendada con éxito!</h3>
+            <p class="mt-4 text-[#BFC5CE]">Hemos recibido su solicitud. Un miembro de nuestro equipo de socios se pondrá en contacto con usted en las próximas <span class="font-semibold text-white">4 horas hábiles</span>.</p>
+            
+            <div class="my-7 py-4 border-y border-white/10 text-sm">
+                <div class="text-[#D4AF37] text-xs tracking-widest">NÚMERO DE REFERENCIA</div>
+                <div id="ref-number" class="font-mono text-xl tracking-[3px] text-white mt-1"></div>
+            </div>
+            
+            <button onclick="closeSuccessModal()" class="premium-btn premium-btn-gold w-full py-3.5 rounded-2xl font-semibold">ENTENDIDO</button>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind Script Configuration
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent-gold', '#D4AF37');
+            
+            // Tailwind script already loaded via CDN, extend config if needed
+            const style = document.createElement('style');
+            style.innerHTML = `
+                .nav-scrolled { background: rgba(5, 5, 5, 0.96) !important; }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // Navbar scroll behavior
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            let lastScroll = 0;
+            
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 80) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    navbar.classList.remove('nav-scrolled');
+                }
+                
+                lastScroll = currentScroll;
+            });
+            
+            // Mobile menu
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileBtn.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileBtn.innerHTML = '<i class="fa-solid fa-times text-xl"></i>';
+                } else {
+                    closeMobileMenu();
+                }
+            });
+            
+            // Close mobile menu on link click
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+        }
+        
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            mobileMenu.classList.add('hidden');
+            mobileBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+        }
+
+        // Hero Particles
+        function initHeroParticles() {
+            const canvas = document.getElementById('hero-particles');
+            if (!canvas) return;
+            
+            const ctx = canvas.getContext('2d', { alpha: true });
+            let particles = [];
+            let animationFrame;
+            
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height * 0.9;
+                    this.size = Math.random() * 2.2 + 0.6;
+                    this.speedY = Math.random() * 0.45 + 0.15;
+                    this.speedX = (Math.random() - 0.5) * 0.25;
+                    this.opacity = Math.random() * 0.5 + 0.25;
+                    this.color = '#D4AF37';
+                }
+                
+                update() {
+                    this.y -= this.speedY;
+                    this.x += this.speedX;
+                    
+                    // Gentle horizontal drift
+                    this.speedX += (Math.random() - 0.5) * 0.008;
+                    if (this.speedX > 0.4) this.speedX = 0.4;
+                    if (this.speedX < -0.4) this.speedX = -0.4;
+                    
+                    if (this.y < 0) {
+                        this.y = canvas.height * 0.92;
+                        this.x = Math.random() * canvas.width;
+                    }
+                    
+                    if (this.x < 0 || this.x > canvas.width) {
+                        this.speedX *= -0.6;
+                    }
+                }
+                
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.opacity;
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Subtle glow
+                    ctx.globalAlpha = this.opacity * 0.3;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size * 2.3, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+            
+            function createParticles() {
+                particles = [];
+                const count = Math.min(65, Math.floor(window.innerWidth / 22));
+                for (let i = 0; i < count; i++) {
+                    particles.push(new Particle());
+                }
+            }
+            
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+                }
+                
+                // Very subtle connecting lines between close particles
+                ctx.strokeStyle = 'rgba(212, 175, 55, 0.07)';
+                ctx.lineWidth = 0.6;
+                
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (dist < 110) {
+                            ctx.globalAlpha = (1 - dist / 110) * 0.35;
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+                ctx.globalAlpha = 1;
+                
+                animationFrame = requestAnimationFrame(animate);
+            }
+            
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                createParticles();
+            });
+            
+            resizeCanvas();
+            createParticles();
+            animate();
+            
+            // Pause animation when tab not visible (performance)
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    cancelAnimationFrame(animationFrame);
+                } else {
+                    animate();
+                }
+            });
+        }
+
+        // Reveal on Scroll
+        function initScrollReveals() {
+            const reveals = document.querySelectorAll('.service-card, .glass, .team-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.transitionDelay = (index % 5) * 60 + 'ms';
+                            entry.target.classList.add('reveal', 'active');
+                        }, 80);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: "0px 0px -60px 0px"
+            });
+            
+            reveals.forEach(el => {
+                el.classList.add('reveal');
+                observer.observe(el);
+            });
+        }
+
+        // Animated Counters
+        function initCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            let hasAnimated = false;
+            
+            const animateCounter = (el) => {
+                const target = parseInt(el.dataset.target);
+                const duration = 1600;
+                const startTime = performance.now();
+                const startValue = 0;
+                
+                const update = (currentTime) => {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    
+                    // Ease out cubic
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.floor(startValue + (target - startValue) * eased);
+                    
+                    el.textContent = current.toLocaleString('es-MX');
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        el.textContent = target.toLocaleString('es-MX');
+                    }
+                };
+                
+                requestAnimationFrame(update);
+            };
+            
+            const statsSection = document.getElementById('estadisticas');
+            
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && !hasAnimated) {
+                    hasAnimated = true;
+                    counters.forEach((counter, i) => {
+                        setTimeout(() => {
+                            animateCounter(counter);
+                        }, i * 180);
+                    });
+                    observer.disconnect();
+                }
+            }, { threshold: 0.5 });
+            
+            observer.observe(statsSection);
+        }
+
+        // Modal Functions
+        let currentService = '';
+        
+        function openConsultModal(service = '') {
+            const modal = document.getElementById('consult-modal');
+            const form = document.getElementById('modal-form');
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            
+            // Pre-fill if service provided
+            if (service) {
+                const select = document.getElementById('modal-servicio');
+                select.value = service;
+            }
+            
+            // Focus first field
+            setTimeout(() => {
+                document.getElementById('modal-nombre').focus();
+            }, 420);
+        }
+        
+        function closeConsultModal() {
+            const modal = document.getElementById('consult-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+        
+        function selectServiceAndOpenModal(service) {
+            openConsultModal(service);
+        }
+        
+        function handleModalFormSubmit(e) {
+            e.preventDefault();
+            
+            const modal = document.getElementById('consult-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            
+            // Show success
+            showSuccessModal();
+            
+            // Reset form
+            e.target.reset();
+        }
+        
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            // Copy values to modal if needed, but directly show success for main form too
+            const mainForm = document.getElementById('contact-form');
+            
+            // For main form we can also trigger success directly
+            showSuccessModal();
+            
+            // Reset
+            setTimeout(() => {
+                mainForm.reset();
+            }, 800);
+        }
+        
+        function showSuccessModal() {
+            const successModal = document.getElementById('success-modal');
+            const refEl = document.getElementById('ref-number');
+            
+            // Generate nice reference
+            const ref = 'VL-' + new Date().getFullYear() + '-' + Math.floor(100000 + Math.random() * 900000);
+            refEl.textContent = ref;
+            
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeSuccessModal() {
+            const successModal = document.getElementById('success-modal');
+            successModal.classList.remove('flex');
+            successModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Keyboard escape for modals
+        function initKeyboardControls() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const consultModal = document.getElementById('consult-modal');
+                    const successModal = document.getElementById('success-modal');
+                    
+                    if (!successModal.classList.contains('hidden')) {
+                        closeSuccessModal();
+                    } else if (!consultModal.classList.contains('hidden')) {
+                        closeConsultModal();
+                    }
+                }
+                
+                if (e.key === '/' && document.activeElement.tagName === 'BODY') {
+                    e.preventDefault();
+                    const contactSection = document.getElementById('contacto');
+                    contactSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+            
+            // Allow / to focus search conceptually (here focuses contact)
+        }
+
+        // Smooth scroll for all anchor links
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Initialize everything
+        function initializeWebsite() {
+            initializeTailwind();
+            initNavbar();
+            initHeroParticles();
+            initScrollReveals();
+            initCounters();
+            initKeyboardControls();
+            initSmoothScroll();
+            
+            // Bonus: Make sure all service cards have nice initial state
+            console.log('%c[VANGUARD LEGAL] Premium design initialized successfully. All systems operational.', 'color:#555');
+            
+            // Easter egg: Konami code for extra gold glow (fun for internal)
+            let konami = [];
+            const pattern = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+            document.addEventListener('keydown', function(e) {
+                konami.push(e.key);
+                konami = konami.slice(-10);
+                if (konami.join(',') === pattern.join(',')) {
+                    document.documentElement.style.setProperty('--accent-gold', '#FFD700');
+                    const goldEls = document.querySelectorAll('.text-\\[\\#D4AF37\\]');
+                    goldEls.forEach(el => el.style.color = '#FFD700');
+                    setTimeout(() => {
+                        document.documentElement.style.setProperty('--accent-gold', '#D4AF37');
+                        goldEls.forEach(el => el.style.color = '');
+                    }, 2200);
+                }
+            });
+        }
+
+        // Boot
+        window.onload = function() {
+            initializeWebsite();
+        };
+        
+        // Expose some functions globally if needed for future extensibility
+        window.VANGUARD = {
+            openConsult: openConsultModal,
+            closeConsult: closeConsultModal
+        };
+    </script>
+</body>
+</html>
